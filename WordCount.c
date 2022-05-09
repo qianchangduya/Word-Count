@@ -11,7 +11,6 @@ int main(){
 	scanf("%s", state);
 	scanf("%s", filename);
 
-
 	if(getCharNum(filename, totalNum)){
 		if(strcmp(state,"-c")==0){
 			printf("字符数：%d\n",  totalNum[0]+1);// 加上最后一行多减去的结束符
@@ -43,7 +42,7 @@ int *getCharNum(char *filename, int *totalNum){
 		perror(filename);
 		return NULL;
 	}
-	
+
 	// 读取每一行数据，保存到buffer，最多只能有1000个字符
 	while(fgets(buffer, 1003, fp) != NULL){
 		bufferLen = strlen(buffer);
